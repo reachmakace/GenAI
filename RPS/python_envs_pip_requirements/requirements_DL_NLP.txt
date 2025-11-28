@@ -1,0 +1,53 @@
+# Core Libraries
+numpy
+pandas
+scipy
+scikit-learn
+joblib
+
+# Deep Learning Frameworks
+tensorflow
+keras
+torch
+torchvision
+torchaudio
+
+# Optimization & Experiment Tracking
+optuna
+mlflow
+
+# NLP Libraries (Classical)
+nltk
+spacy
+gensim
+textblob
+beautifulsoup4
+
+# Visualization
+matplotlib
+seaborn
+plotly
+graphviz
+pydot
+scikit-plot
+
+# Explainability (for NN models)
+shap
+lime
+eli5
+
+# Jupyter & Interactive Tools
+jupyterlab
+notebook
+ipywidgets
+ipympl
+
+# Utilities and Helpers
+tqdm
+pandas-profiling
+black
+isort
+
+# Optional CV Support
+opencv-python
+Pillow

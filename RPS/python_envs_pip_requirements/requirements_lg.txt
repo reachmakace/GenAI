@@ -1,0 +1,61 @@
+# Core Framework
+langgraph
+openai
+langchain-core
+langchain-community
+langchain-openai
+langsmith
+
+# LLMs & Embeddings
+tiktoken
+transformers
+sentence-transformers
+torch
+accelerate
+
+# Vector Stores (install only what you need)
+chromadb
+faiss-cpu
+psycopg2-binary
+pymilvus
+pinecone-client
+qdrant-client
+aiosqlite
+pygments
+
+# Document Handling & Data
+pymupdf
+unstructured
+beautifulsoup4
+python-docx
+openpyxl
+odfpy
+requests
+pandas
+numpy
+biopython
+pymed
+
+# Agent Tools / Knowledge Sources
+duckduckgo-search
+wikipedia
+google-api-python-client
+arxiv
+sqlalchemy
+# Tavily API (use requests or official client if available)
+# tavily-client   (uncomment if official client exists)
+
+# Observability, Guardrails & Validation
+pydantic
+loguru
+guardrails-ai
+llm-guard
+
+# Dev & Deployment
+python-dotenv
+jupyter
+ipykernel
+rich
+typer
+fastapi
+uvicorn

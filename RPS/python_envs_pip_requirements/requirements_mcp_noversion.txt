@@ -1,0 +1,326 @@
+# ============================================
+# CORE MCP LIBRARIES
+# ============================================
+
+# Model Context Protocol - Core implementation
+mcp
+
+# FastMCP - Simplified MCP server creation framework
+fastmcp
+
+# MCP Python SDK - Official Python bindings (check if available)
+# mcp-python
+
+# ============================================
+# LLM PROVIDERS & FRAMEWORKS
+# ============================================
+
+# Anthropic Claude API
+anthropic
+
+# OpenAI GPT models
+openai
+
+# LangChain - LLM framework with MCP support
+langchain
+langchain-openai
+langchain-anthropic
+langchain-community
+# langchain-mcp-adapters  # Check if available
+
+# LangGraph - Multi-agent workflows
+langgraph
+
+# LiteLLM - Multi-provider LLM interface
+litellm
+
+# Ollama - Local LLM support
+ollama
+
+# ============================================
+# ASYNC & CONCURRENCY
+# ============================================
+
+# Async support for Jupyter notebooks
+nest-asyncio
+
+# Advanced async utilities
+asyncio-timeout
+aiofiles
+aiohttp
+
+# ============================================
+# DATA SOURCES & APIs
+# ============================================
+
+# Academic paper search (arXiv)
+arxiv
+
+# PubMed/Biomedical research
+biopython
+# pymed  # Check availability
+# pubmed-parser  # Check availability
+
+# Web search and research tools
+# tavily-python  # Check availability
+duckduckgo-search
+# serpapi  # Usually no version
+# googlesearch-python
+
+# Wikipedia and knowledge bases
+wikipedia
+# wikidata
+
+# News and media APIs
+# newsapi-python
+# tweepy
+
+# Web scraping and data extraction
+requests
+beautifulsoup4
+selenium
+scrapy
+playwright
+
+# Database connectors
+sqlalchemy
+psycopg2-binary
+pymongo
+redis
+
+# File handling
+python-docx
+PyPDF2
+openpyxl
+
+# ============================================
+# RESEARCH & KNOWLEDGE SOURCES
+# ============================================
+
+# Scientific databases
+# crossref-commons
+# semantic-scholar
+# scopus
+# unpaywall
+
+# Legal and patent databases
+# patent-client
+# justia
+
+# Financial and economic data
+yfinance
+# alpha-vantage
+# fredapi
+
+# Geographic and mapping
+geopandas
+folium
+geopy
+
+# ============================================
+# SPECIALIZED APIs & TOOLS
+# ============================================
+
+# GitHub API
+PyGithub
+
+# Google APIs
+google-api-python-client
+google-auth
+
+# Slack integration
+slack-sdk
+
+# Email handling (built-in modules, no install needed)
+# imaplib
+# smtplib
+
+# Weather and climate data
+# openweather-api
+# meteostat
+# climate-indices
+
+# Government and public data
+# census
+# data-gov
+# world-bank-data
+
+# Translation and language
+googletrans
+# deepl
+langdetect
+
+# ============================================
+# DEVELOPMENT & DEPLOYMENT
+# ============================================
+
+# Environment management
+python-dotenv
+
+# Configuration management
+pydantic
+pydantic-settings
+
+# Logging and monitoring
+structlog
+prometheus-client
+
+# Testing
+pytest
+pytest-asyncio
+pytest-mock
+
+# Type checking
+mypy
+
+# Code formatting
+black
+isort
+
+# ============================================
+# JUPYTER & NOTEBOOK SUPPORT
+# ============================================
+
+# Enhanced Jupyter experience
+jupyter
+jupyterlab
+ipywidgets
+
+# Notebook utilities
+nbformat
+nbconvert
+
+# ============================================
+# DATA PROCESSING & ANALYSIS
+# ============================================
+
+# Core data science
+pandas
+numpy
+
+# Data visualization
+matplotlib
+plotly
+seaborn
+
+# JSON handling
+jsonschema
+ujson
+
+# Text processing
+nltk
+spacy
+transformers
+
+# ============================================
+# NETWORKING & COMMUNICATION
+# ============================================
+
+# WebSocket support for real-time MCP
+websockets
+
+# HTTP utilities
+httpx
+fastapi
+uvicorn
+
+# ============================================
+# SECURITY & AUTHENTICATION
+# ============================================
+
+# Cryptography and security
+cryptography
+passlib
+python-jose
+
+# OAuth and API keys
+authlib
+
+# ============================================
+# UTILITIES & HELPERS
+# ============================================
+
+# Rich terminal output
+rich
+
+# Progress bars
+tqdm
+
+# Date/time handling
+python-dateutil
+
+# URL parsing
+urllib3
+
+# Command line interfaces
+click
+typer
+
+# File watching (for development)
+watchdog
+
+# ============================================
+# VECTOR DATABASES & EMBEDDINGS
+# ============================================
+
+# Vector databases for RAG applications
+chromadb
+pinecone-client
+weaviate-client
+
+# Embeddings
+sentence-transformers
+
+# ============================================
+# OPTIONAL: SPECIALIZED TOOLS
+# ============================================
+
+# Computer vision (uncomment if needed)
+# opencv-python
+# Pillow
+
+# Machine learning (uncomment if needed)
+# scikit-learn
+# torch
+
+# ============================================
+# INSTALLATION INSTRUCTIONS
+# ============================================
+
+# RECOMMENDED INSTALLATION APPROACH:
+#
+# 1. Create virtual environment:
+#    python -m venv mcp_env
+#    source mcp_env/bin/activate  # Linux/Mac
+#    mcp_env\Scripts\activate     # Windows
+#
+# 2. Upgrade pip:
+#    python -m pip install --upgrade pip
+#
+# 3. Install core packages first:
+#    pip install mcp fastmcp anthropic openai nest-asyncio python-dotenv
+#
+# 4. Install remaining packages:
+#    pip install -r requirements_mcp_noversion.txt
+#
+# 5. If conflicts occur:
+#    - Install packages in smaller groups
+#    - Use --no-deps flag for problematic packages
+#    - Check package documentation for compatibility
+#
+# 6. For production, freeze versions:
+#    pip freeze > requirements_locked.txt
+#
+# ALTERNATIVE: Install only what you need:
+# pip install mcp fastmcp anthropic arxiv jupyter pandas requests
+
+# BENEFITS OF NO VERSIONS:
+# ✓ Always gets latest features and bug fixes
+# ✓ Fewer dependency conflicts
+# ✓ Easier maintenance
+# ✓ Better compatibility with new Python versions
+#
+# CONSIDERATIONS:
+# ⚠ Less reproducible across environments
+# ⚠ Potential breaking changes
+# ⚠ May need to test after updates

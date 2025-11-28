@@ -1,0 +1,31 @@
+📌 What is Temperature?
+In language models, the temperature parameter controls how random or predictable the output is. It adjusts the model's behavior when choosing the next word or token during text generation.
+
+You can think of it like a creativity knob:
+
+- A low temperature means the model will play it safe and choose the most likely next word.
+- A high temperature means the model might take risks and choose less obvious words.
+
+🎛️ How It Affects Output
+- Temperature 0 to 0.3: Very focused and deterministic. The output is precise and repeatable, but sometimes boring or repetitive.
+- Temperature around 0.7: A good balance. The model is creative but still coherent.
+- Temperature 1 and above: The model becomes more creative and unpredictable. This is great for poetry or brainstorming, but can sometimes lead to weird or incorrect answers.
+
+🎯 When to Use What
+- Use low temperature for tasks like question answering, programming help, or fact-based generation.
+- Use medium temperature for conversations or storytelling.
+- Use high temperature for brainstorming, fiction, or generating creative ideas.
+
+✅ Pros
+- Gives you control over tone and creativity.
+- Allows the same model to behave differently depending on the task.
+- Great for switching between serious and playful modes.
+
+⚠️ Cons
+- If the temperature is too low, the model can sound boring or repetitive.
+- If the temperature is too high, it may say things that don’t make sense or are factually wrong.
+
+🧠 Summary
+- Low temperature: More accurate, less creative.
+- High temperature: More creative, less accurate.
+- Adjust the temperature based on whether you want reliable answers or creative ideas.

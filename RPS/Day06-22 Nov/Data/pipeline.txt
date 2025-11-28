@@ -1,0 +1,9 @@
+Machine learning (ML) model pipelining is the process of organizing the entire ML workflow—from raw data to predictions—into a structured sequence of steps that can be executed automatically and consistently. 
+
+Key points:
+
+- Automates the end-to-end ML workflow.
+- Ensures consistency in data preprocessing and feature engineering.
+- Makes experiments repeatable and comparable.
+- Simplifies deployment and maintenance.
+- Encourages modular, clean, and reusable code.

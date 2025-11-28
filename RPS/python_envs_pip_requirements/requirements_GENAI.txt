@@ -1,0 +1,68 @@
+# Core Libraries
+numpy
+pandas
+scipy
+scikit-learn
+joblib
+
+# Deep Learning Framework (PyTorch only)
+torch
+torchvision
+
+
+# NLP & Embeddings
+nltk
+spacy
+gensim
+textblob
+sentence-transformers
+huggingface-hub
+datasets
+accelerate
+evaluate
+
+# LLMs and APIs
+openai
+transformers
+
+# Vector Databases
+chromadb
+faiss-cpu
+pinecone-client
+redis
+pymongo
+
+# LangChain Ecosystem
+langchain
+langchain-core
+langchain-community
+langchain-openai
+langchain-experimental
+langflow
+
+# Visualization & Experimentation
+matplotlib
+seaborn
+plotly
+graphviz
+pydot
+scikit-plot
+
+# Explainability (optional)
+shap
+lime
+eli5
+
+# Jupyter & Interactive Tools
+jupyterlab
+notebook
+ipywidgets
+ipympl
+
+# Utilities and Helpers
+tqdm
+#pandas-profiling
+#mlflow
+#optuna
+#black
+#isort

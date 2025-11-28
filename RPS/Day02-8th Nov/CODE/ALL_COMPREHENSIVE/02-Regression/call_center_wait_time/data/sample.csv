@@ -1,0 +1,11 @@
+hour,day_of_week,call_type,queue_length,agents_on_shift,wait_time
+9,0,tech,4,12,19.814647
+11,2,billing,6,8,40.123456
+15,4,sales,2,15,11.234567
+10,1,tech,7,9,36.987654
+14,3,general,3,10,22.345678
+16,5,tech,10,6,65.123456
+8,6,billing,1,20,7.987654
+13,1,tech,5,11,29.456789
+18,2,sales,8,7,45.678912
+12,0,general,2,14,16.345678

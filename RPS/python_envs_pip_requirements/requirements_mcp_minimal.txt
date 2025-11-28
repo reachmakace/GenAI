@@ -1,0 +1,31 @@
+# MCP Learning - Minimal Starter Kit
+# Essential packages only - add more as needed
+
+# Core MCP
+mcp
+fastmcp
+
+# LLM APIs
+anthropic
+openai
+
+# Basic async support
+nest-asyncio
+
+# Research tools
+arxiv
+wikipedia
+requests
+
+# Development essentials
+python-dotenv
+rich
+jupyter
+
+# Data handling
+pandas
+json5
+
+# Optional but recommended
+pytest
+black
