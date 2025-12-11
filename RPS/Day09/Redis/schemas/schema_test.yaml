@@ -1,0 +1,22 @@
+version: '0.1.0'
+
+index:
+  name: test-index
+  prefix: doc
+  key_separator: ':'
+  storage_type: json
+
+fields:
+  - name: id
+    type: tag
+  - name: title
+    type: text
+  - name: embedding
+    type: vector
+    attrs:
+      algorithm: hnsw
+      dims: 768
+      distance_metric: cosine
+      datatype: float32
+      m: 16
+      ef_construction: 200

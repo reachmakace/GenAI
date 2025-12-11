@@ -1,0 +1,102 @@
+# === Core Framework ===
+langgraph
+langgraph-checkpoint-sqlite
+langgraph-sdk
+langgraph-cli
+langchain
+langchain-core
+langchain-community
+langchain-openai
+langsmith
+openai
+crewai
+crewai-tools
+
+# === LLMs & Embeddings ===
+tiktoken
+transformers
+sentence-transformers
+torch
+torchvision
+torchaudio
+accelerate
+evaluate
+huggingface-hub
+
+# === Vector Databases (install only what you need) ===
+chromadb
+faiss-cpu
+pinecone-client
+qdrant-client
+pymilvus
+psycopg2-binary
+aiosqlite
+pymongo
+redis
+duckdb
+sqlalchemy
+pygments
+
+# === Document Handling & Data Processing ===
+pandas
+numpy
+scipy
+requests
+pymupdf
+unstructured
+beautifulsoup4
+python-docx
+openpyxl
+odfpy
+biopython
+pymed
+nltk
+spacy
+gensim
+textblob
+datasets
+
+# === Agent Tools / Knowledge Sources ===
+duckduckgo-search
+wikipedia
+google-api-python-client
+arxiv
+#tavily-client   # (optional – uncomment if official client exists)
+
+# === Observability, Guardrails & Validation ===
+pydantic
+guardrails-ai
+
+# === Visualization & Experimentation ===
+matplotlib
+seaborn
+plotly
+graphviz
+pydot
+scikit-plot
+
+# === Explainability (optional) ===
+shap
+lime
+eli5
+
+# === Development & Deployment ===
+fastapi
+uvicorn
+python-dotenv
+typer
+rich
+tqdm
+
+# === Jupyter & Interactive Tools ===
+jupyterlab
+notebook
+ipykernel
+ipywidgets
+ipympl
+
+# Redis and Vector Libraries
+redis>=4.5.5
+redisearch>=2.0.0
+langchain-redis>=0.0.10
+redisvl>=0.0.15

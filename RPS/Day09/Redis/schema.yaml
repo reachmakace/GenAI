@@ -1,0 +1,20 @@
+version: '0.1.0'
+
+index:
+    name: user-index
+    prefix: user
+    key_separator: ":"
+    storage_type: json
+
+fields:
+    - name: user
+      type: tag
+    - name: credit_score
+      type: tag
+    - name: embedding
+      type: vector
+      attrs:
+        algorithm: flat
+        dims: 3
+        distance_metric: cosine
+        datatype: float32
