@@ -1,0 +1,22 @@
+
+docker run -d --name redis-redisearch -p 6379:6379 redislabs/redisearch:latest - Deprecated
+
+docker run -d --name redisearch -p 6379:6379 redis/redis-stack-server:latest
+
+Step 1: Activate to the python environment
+Cd D:\Makesh\Working\AI\Python_Envs\capgenai\Scripts
+./activate
+
+Step 2: Set up the source code location
+$env:PYTHONPATH = 'D:\Makesh\Working\AI\RPS\Assignments\Capstone\cap-01'
+Set-Location -Path 'D:\Makesh\Working\AI\RPS\Assignments\Capstone\cap-01'
+pytest -q
+
+Step 3: Run the ingestion pipeline script
+python -m ingestion.run_ingest --input_dir Data\Input --output_dir Data\Output
+
+Step 4: Set up the OPEN API key
+$env:OPENAI_API_KEY = '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'
+
+Step 5: Run the Rag pipeline
+python -m rag_pipeline.build_index --chunks Data\Output\chunks.jsonl --persist_dir .chromadb

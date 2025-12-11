@@ -1,0 +1,126 @@
+NVIDIA Investor Presentation
+
+1. Company Overview
+
+NVIDIA Corporation is a global leader in accelerated computing, known
+for its pioneering work in graphics processing units (GPUs), artificial
+intelligence (AI), and data center technologies. Founded in 1993, the
+company has transitioned from a gaming-focused graphics company to a
+dominant player in AI infrastructure, autonomous systems, and enterprise
+computing.
+
+------------------------------------------------------------------------
+
+2. Key Business Segments
+
+2.1 Data Center
+
+-   Largest and fastest-growing segment.
+-   Driven by demand for AI training and inference workloads.
+-   Flagship products include NVIDIA H100, A100, and the upcoming
+    next-gen platforms.
+-   Powers hyperscalers (AWS, Azure, Google Cloud), research
+    institutions, and enterprises.
+
+2.2 Gaming
+
+-   Home of GeForce GPUs.
+-   Includes laptops, desktops, and cloud gaming (GeForce NOW).
+-   Ray tracing and DLSS (Deep Learning Super Sampling) continue to grow
+    adoption.
+
+2.3 Professional Visualization
+
+-   Used in design, engineering, and simulation.
+-   Powered by RTX technology.
+
+2.4 Automotive
+
+-   Focus on autonomous driving and AI-based cockpit systems.
+-   Includes NVIDIA DRIVE platform.
+
+------------------------------------------------------------------------
+
+3. Financial Highlights
+
+-   Revenue growth primarily driven by AI and data center.
+-   Strong margins due to high-performance hardware and software
+    ecosystem.
+-   Increasing software-related recurring revenue through CUDA,
+    enterprise AI licenses, and Omniverse.
+
+------------------------------------------------------------------------
+
+4. NVIDIA AI Platform
+
+4.1 CUDA Ecosystem
+
+-   Proprietary parallel computing platform.
+-   Foundation for AI training and simulation worldwide.
+
+4.2 DGX Systems
+
+-   Full-stack AI supercomputers.
+-   Used extensively for LLM training and enterprise AI adoption.
+
+4.3 Networking (Mellanox)
+
+-   High-speed networking such as InfiniBand.
+-   Critical for AI clusters.
+
+------------------------------------------------------------------------
+
+5. Market Opportunities
+
+5.1 Generative AI
+
+-   Massive demand for training LLMs and deploying inference workloads.
+-   Enterprise AI adoption increasing globally.
+
+5.2 Autonomous Vehicles
+
+-   Long-term opportunity in AI-powered transportation.
+
+5.3 Industrial Digital Twins (Omniverse)
+
+-   Simulation and robotics acceleration.
+
+5.4 Cloud & Hyperscaler Partnerships
+
+-   Strong collaboration pipeline across major cloud service providers.
+
+------------------------------------------------------------------------
+
+6. Strategic Advantages
+
+-   Technological leadership in GPU and AI acceleration.
+-   Deep software ecosystem (CUDA, TensorRT, NeMo).
+-   Strong partnerships across cloud, automotive, robotics, and
+    enterprise.
+-   Unique end-to-end platform: hardware + software + networking.
+
+------------------------------------------------------------------------
+
+7. Risks & Challenges
+
+-   Competitive pressure from AMD, Intel, and custom AI chips.
+-   Supply chain and manufacturing dependency (primarily TSMC).
+-   Regulatory concerns in sensitive markets.
+
+------------------------------------------------------------------------
+
+8. Future Outlook
+
+-   Expected continued leadership in AI infrastructure.
+-   Rapid expansion in enterprise AI deployments.
+-   Growth of AI PCs and edge AI markets.
+-   Strong roadmap for next-generation GPUs, networking, and software
+    platforms.
+
+------------------------------------------------------------------------
+
+9. Conclusion
+
+NVIDIA remains positioned as a top beneficiary of the global AI wave.
+Its full-stack approach, hardware dominance, and software ecosystem
+provide sustained competitive advantages and long-term growth potential.

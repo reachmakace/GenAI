@@ -1,0 +1,12 @@
+langchain
+openai
+chromadb
+python-docx
+pypdf
+spacy
+tiktoken
+pydantic
+streamlit
+fastapi
+uvicorn
+pytest
