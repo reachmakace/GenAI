@@ -1,22 +1,31 @@
+Step 1: Setup your python environment in your local
+    1. Make sure python is installed in your machine
+    2. python -m venv <yourenv>
+    3. cd <yourenv>\Scripts
+    4. ./activate
 
-docker run -d --name redis-redisearch -p 6379:6379 redislabs/redisearch:latest - Deprecated
+Step 2: Set up the source code location  (Replace the path with your local path)
+    1. $env:PYTHONPATH = 'D:\Makesh\Working\AI\RPS\Assignments\Capstone\cap-01'
+    2. Set-Location -Path 'D:\Makesh\Working\AI\RPS\Assignments\Capstone\cap-01'
 
-docker run -d --name redisearch -p 6379:6379 redis/redis-stack-server:latest
+Step 3: Install the dependencies from requirement.txt
+    1. pip install -r requirements.txt
+    2. It will take some 5 - 7 mins. Wait for the installation to complete
 
-Step 1: Activate to the python environment
-Cd D:\Makesh\Working\AI\Python_Envs\capgenai\Scripts
-./activate
+Step 4: Run the ingestion pipeline script
+    1. python -m ingestion.run_ingest --input_dir Data\Input --output_dir Data\Output
+    2. Verify if the chunks.jsonl file created inside output folder
 
-Step 2: Set up the source code location
-$env:PYTHONPATH = 'D:\Makesh\Working\AI\RPS\Assignments\Capstone\cap-01'
-Set-Location -Path 'D:\Makesh\Working\AI\RPS\Assignments\Capstone\cap-01'
-pytest -q
+Step 5: Set up the OPEN API key
+    1. $env:OPENAI_API_KEY = '<your API Key'
 
-Step 3: Run the ingestion pipeline script
-python -m ingestion.run_ingest --input_dir Data\Input --output_dir Data\Output
+Step 6: Run the Rag pipeline
+    1. python -m rag_pipeline.build_index --chunks Data\Output\chunks.jsonl --persist_dir .chromadb
+    2. Verify .chromadb folder created in the root folder
 
-Step 4: Set up the OPEN API key
-$env:OPENAI_API_KEY = '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'
+Step 7: Running a sample query from command prompt
+    1. python -m scripts.query_example
+    2. Ensure there is output from the llm
 
-Step 5: Run the Rag pipeline
-python -m rag_pipeline.build_index --chunks Data\Output\chunks.jsonl --persist_dir .chromadb
+Step 8: Running the streamlit UI
+    1. streamlit run app\streamlit_app
