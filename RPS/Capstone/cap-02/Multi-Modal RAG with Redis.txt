@@ -1,0 +1,120 @@
+Multi-Modal RAG with Redis & LangChain – Project Outline
+1. Project Overview
+Goal: Build a multi-modal Retrieval-Augmented Generation (RAG) system using Redis, LangChain, and a vision-capable OpenAI model (e.g., GPT-4o/GPT-4V) to answer questions about slide decks that mix text, charts, tables, and graphics.
+•	Key capabilities:
+•	Ingest PDF slide decks (e.g., Nvidia Q3 FY24 investor presentation).
+•	Extract and summarize both text and image content at the slide level.
+•	Index slide summaries as text embeddings in Redis for efficient retrieval.
+•	Store and retrieve raw slide images (or their locations) in Redis.
+•	Use LangChain MultiVectorRetriever for rich text-based retrieval over slide summaries.
+•	Use a vision-capable LLM to generate grounded answers using both text and images.
+•	Add semantic caching in Redis to avoid repeated LLM and retrieval calls for similar questions.
+2. High-Level Architecture (LangChain Style)
+1.	Main components:
+2.	Ingestion Pipeline (offline): Load PDFs, extract slides, generate multi-modal slide summaries, and store them in Redis.
+3.	Vector Store & MultiVectorRetriever: Index slide summary embeddings in Redis and retrieve relevant slides for a given query.
+4.	Semantic Cache: Store question–answer pairs in Redis with question embeddings for fast reuse.
+5.	Runtime RAG Chain: Orchestrate cache lookup, retrieval, image fetching, and final answer generation with a vision LLM.
+6.	Frontend / API Layer: Simple UI or API endpoints for uploading slide decks and asking questions.
+3. Data Model Design (Redis)
+3.1 Slide-Level Documents
+One hash per slide, e.g. key: slide:{deck_id}:{slide_number}
+•	Suggested fields:
+•	deck_id – unique identifier for the slide deck.
+•	slide_number – slide or page index.
+•	company – company name (e.g., NVIDIA).
+•	date / quarter – e.g., Q3 FY24.
+•	title – slide title.
+•	summary_text – GPT-4V-generated multi-modal summary of the slide.
+•	raw_text – raw text extracted from the slide (optional).
+•	image_refs – one or more keys pointing to slide images.
+•	summary_embedding – embedding vector for summary_text (indexed in Redis).
+3.2 Image-Level Documents
+One hash per image, e.g. key: image:{deck_id}:{slide_number}:{image_index}
+•	Suggested fields:
+•	deck_id – link back to the deck.
+•	slide_number – slide where this image appears.
+•	image_index – index of the image on the slide.
+•	image_b64 or image_url – raw image as base64 or URL to S3/local storage.
+•	image_caption or image_summary_text – optional GPT-4V summary of the image only.
+•	image_embedding – optional embedding of image summary text (if using a separate image index).
+3.3 Semantic Cache Documents
+One hash per cached answer, e.g. key: cache:qa:{uuid}
+•	Suggested fields:
+•	question_text – original user question.
+•	question_embedding – embedding vector of the question.
+•	answer_text – final LLM answer.
+•	deck_id – deck(s) used in answering (optional).
+•	slides_used – list of slide identifiers used (optional).
+•	timestamp – when the cache entry was created.
+4. Ingestion Pipeline (LangChain)
+4.1 PDF Loading and Slide Extraction
+7.	Steps:
+8.	Use a custom PDF loader (or extend an existing LangChain PDF loader) to load the slide deck.
+9.	Split the document by page or slide so that each slide becomes a separate Document.
+10.	Populate metadata fields such as deck_id, slide_number, company, date, etc.
+4.2 Multi-Modal Slide Summarization with GPT-4V
+11.	For each slide:
+12.	Render or extract the slide as an image (e.g., using pdf2image).
+13.	Send the slide image and extracted text to a LangChain LLMChain configured with a vision-capable model (e.g., GPT-4o/GPT-4V).
+14.	Prompt the model to produce a concise slide summary capturing both the textual points and the information in charts/tables.
+15.	Create a new Document where page_content = summary_text and metadata includes deck_id, slide_number, image_refs, etc.
+4.3 Embedding and Redis Indexing
+16.	Steps:
+17.	Use LangChain’s OpenAIEmbeddings (or similar) to embed each summary_text.
+18.	Store the summary documents and their embeddings in a Redis-backed VectorStore.
+19.	Ensure that each stored vector has a stable parent identifier (e.g., slide_id) for MultiVectorRetriever.
+4.4 MultiVectorRetriever Setup
+•	Design:
+•	Parent documents represent slides (with full metadata and references to images).
+•	Child vectors represent slide summaries (and optionally additional representations such as numeric or image-only summaries).
+•	Configure LangChain’s MultiVectorRetriever so that it:
+•	Uses the Redis vector index for child vectors.
+•	Maps retrieved child vectors back to their parent slide documents.
+5. Semantic Cache (LangChain)
+•	Create a separate Redis-based VectorStore for cached Q&A entries:
+•	Each cache Document has page_content = answer_text.
+•	Metadata includes question_text, deck_id, slides_used, and timestamp.
+•	The vector is the embedding of question_text.
+•	Implement a SemanticCacheRetriever:
+•	Wrap a VectorStoreRetriever on the cache VectorStore.
+•	On a new question, embed the question and search the cache index.
+•	Apply a similarity threshold and optionally a recency filter to decide if a cached answer is valid.
+6. Runtime RAG Chain (LangChain Style)
+6.1 Logical Steps
+20.	Given a user question:
+21.	Embed the question using the same embeddings model.
+22.	Check the Semantic Cache via SemanticCacheRetriever.
+23.	If a high-similarity cache hit is found, return the cached answer immediately.
+24.	If cache miss or low similarity:
+25.	Use MultiVectorRetriever over Redis to retrieve top-k relevant slides based on summary embeddings.
+26.	For each retrieved slide, fetch the associated image(s) from Redis using image_refs.
+27.	Call a vision-enabled LLMChain (GPT-4V) with the original question, the retrieved slide summaries, and the raw images.
+28.	Generate a grounded answer that references slide content and numeric values when available.
+29.	Write the question–answer pair to the semantic cache (store question_text, question_embedding, and answer_text, plus metadata).
+6.2 Chains and Retrievers Involved
+•	Question Embedding Step – a simple embedding call or small chain.
+•	SemanticCacheRetriever – a retriever over the cache VectorStore.
+•	SlideRetriever – MultiVectorRetriever over the slide summary VectorStore.
+•	ImageFetch Step – a small function or tool that looks up images in Redis for slide_ids.
+•	VisionAnswerChain – LLMChain that uses GPT-4V (or GPT-4o with vision) to answer based on question + slides + images.
+•	CacheWrite Step – after answer generation, stores the new cache entry in Redis.
+7. Frontend / API Layer
+•	Minimal functionality:
+•	Upload slide decks (admin panel or CLI) to trigger ingestion pipeline.
+•	Ask natural language questions through a web UI or API endpoint.
+•	Display the final answer along with:
+•	Referenced slides (with slide numbers).
+•	Thumbnails or links to the slide images used.
+•	Indication whether the answer was served from semantic cache.
+8. Phased Implementation Plan
+•	Phase 1 – Text-Only RAG:
+•	Implement PDF ingestion and text-only slide-level RAG using Redis and LangChain.
+•	Phase 2 – Multi-Modal Slide Summaries:
+•	Add GPT-4V slide summarization to create richer summary_text and reindex.
+•	Phase 3 – Vision RAG at Answer Time:
+•	Fetch slide images for retrieved slides and include them in the final GPT-4V answer chain.
+•	Phase 4 – Semantic Cache:
+•	Implement the semantic cache VectorStore and SemanticCacheRetriever in Redis.
+•	Phase 5 – Optimization and UX:
+•	Tune retrieval parameters, prompts, and cache thresholds; enhance frontend to show provenance and cache usage.

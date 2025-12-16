@@ -1,0 +1,33 @@
+Step 1: Setup your python environment in your local
+    1. Make sure python is installed in your machine
+    2. python -m venv capgenai2
+    3. cd <yourenv>\Scripts
+    4. ./activate
+
+Step 2: Set up the source code location  (Replace the path with your local path)
+    1. $env:PYTHONPATH = 'D:\Makesh\Working\AI\RPS\Assignments\Capstone\cap-02'
+    2. Set-Location -Path 'D:\Makesh\Working\AI\RPS\Assignments\Capstone\cap-02'
+
+Step 3: Install the dependencies from requirement.txt
+    1. pip install -r requirements.txt
+    2. It will take some 5 - 7 mins. Wait for the installation to complete
+
+Step 4: Run the ingestion pipeline script
+    1. python -m src.ingest --input-dir Input --output data/chunks.jsonl --chunk-size 1000 --overlap 200
+    2. Verify if the chunks.jsonl file created inside output folder
+
+Step 5: Set up the OPEN API key
+    1. $env:OPENAI_API_KEY = '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'
+
+Step 6: Run the Indexer pipeline
+    1. Run the redis instance in docker
+       docker run -d --name redisearch -p 6379:6379 redis/redis-stack-server:latest 
+    2. python -m src.indexer --input data/chunks.jsonl --batch-size 64
+    3. Make sure the embeddings are stored in redis instance
+
+Step 7: Running a sample query from command prompt
+    1. python -m scripts.query_example
+    2. Ensure there is output from the llm
+
+Step 8: Running the streamlit UI
+    1. streamlit run app\streamlit_app

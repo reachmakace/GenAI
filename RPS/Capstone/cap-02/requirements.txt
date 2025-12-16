@@ -1,0 +1,17 @@
+langchain
+openai
+redis
+python-dotenv
+fastapi
+uvicorn
+numpy
+pandas
+pdfminer.six
+pytesseract
+Pillow
+transformers
+torch
+sentence-transformers
+tiktoken
+requests
+pytest
