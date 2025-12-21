@@ -1,33 +1,73 @@
-Step 1: Setup your python environment in your local
-    1. Make sure python is installed in your machine
-    2. python -m venv capgenai2
-    3. cd <yourenv>\Scripts
-    4. ./activate
 
-Step 2: Set up the source code location  (Replace the path with your local path)
-    1. $env:PYTHONPATH = 'D:\Makesh\Working\AI\RPS\Assignments\Capstone\cap-02'
-    2. Set-Location -Path 'D:\Makesh\Working\AI\RPS\Assignments\Capstone\cap-02'
+docker run -d --name redis-redisearch -p 6379:6379 redislabs/redisearch:latest - Deprecated
 
-Step 3: Install the dependencies from requirement.txt
-    1. pip install -r requirements.txt
-    2. It will take some 5 - 7 mins. Wait for the installation to complete
+docker run -d --name redisearch -p 6379:6379 redis/redis-stack-server:latest
+
+Step 1: Activate to the python environment
+python -m venv myenv2
+cd C:\Users\Administrator\Makesh\Capstone\myenv2\Scripts
+./activate
+
+pip install -r requirements.txt
+
+Step 2: Set up the source code location
+$env:PYTHONPATH = 'C:\Users\Administrator\Makesh\Capstone\cap-02\rag_app'
+Set-Location -Path 'C:\Users\Administrator\Makesh\Capstone\cap-02\rag_app'
+pytest -q
+
+Step 3: Set up the OPEN API key
+$env:OPENAI_API_KEY = ''
 
 Step 4: Run the ingestion pipeline script
-    1. python -m src.ingest --input-dir Input --output data/chunks.jsonl --chunk-size 1000 --overlap 200
-    2. Verify if the chunks.jsonl file created inside output folder
+python pdf_loader.py nvidia.pdf  - Test the text extraction from slides
 
-Step 5: Set up the OPEN API key
-    1. $env:OPENAI_API_KEY = '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'
+python main.py --> process your PDF and populate the Redis vector store.
 
-Step 6: Run the Indexer pipeline
-    1. Run the redis instance in docker
-       docker run -d --name redisearch -p 6379:6379 redis/redis-stack-server:latest 
-    2. python -m src.indexer --input data/chunks.jsonl --batch-size 64
-    3. Make sure the embeddings are stored in redis instance
+python main.py ingest  --> TO ingest and store
 
-Step 7: Running a sample query from command prompt
-    1. python -m scripts.query_example
-    2. Ensure there is output from the llm
+python main.py query "What is the Datacenter revenue for FY2024"  --> Verify the ingestion
 
-Step 8: Running the streamlit UI
-    1. streamlit run app\streamlit_app
+Step 5: Extract the image from PDF
+install the poppler
+1. Download Poppler for Windows
+Download the latest Poppler binary from:
+https://github.com/oschwartz10612/poppler-windows/releases/
+Extract the zip file to a folder, e.g., C:\poppler.
+2. Add Poppler to your PATH
+Open System Properties → Environment Variables.
+Under "System variables", find and select Path, then click Edit.
+Add the path to the bin folder inside your Poppler directory, e.g.:
+C:\poppler\Library\bin
+or
+C:\poppler\bin
+(depending on your extracted folder structure).
+
+Slide creation
+python pdf_loader.py  --> This is to create the slide images
+
+Step 5: Run the Rag pipeline
+
+Summary Creation (Text + Image)
+python multi_modal_summary.py
+
+Populate your Redis vectorstore with the summaries and image references for all slides
+python store_summaries_to_redis.py  
+
+
+#A script named vision_rag_query.py is now created. It uses a MultiVectorRetriever to fetch the top relevant slides (with summaries and images) from Redis, builds a multi-modal prompt, and sends both text and images to GPT-4o for a grounded answer.
+ python vision_rag_query.py "Summary the Datacenter review of Q2 annd Q3 or the FY2024"
+ python vision_rag_query.py "Summarize the Datacenter review of Q2 and Q3 for FY2024" --k 5 --prompt "You are a financial analyst. Given the following question: {question}, use the slides and images to provide a detailed answer."
+
+#Custom parateers
+python vision_rag_query.py "Summarize the Datacenter review of Q2 and Q3 for FY2024" --k 4 --cache-threshold 0.85 --prompt "You are a financial analyst. Given the following question: {question}, use the slides and images to provide a detailed answer."
+
+
+# Step 6: StreamLit UI
+streamlit run rag_app/streamlit_app.py
+
+
+Redis commands
+redis-cli FT.DROPINDEX slides-multimodal-index DD
+redis-cli FLUSHALL
+redis-cli KEYS "*"
+

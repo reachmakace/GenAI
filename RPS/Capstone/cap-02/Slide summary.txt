@@ -1,0 +1,226 @@
+Slide 1 summary:
+The slide is an introductory cover for NVIDIA's Q3 FY24 investor presentation, dated November 27, 2023. It features NVIDIA's logo prominently alongside a stylized green graphic that complements the brand's identity.
+
+Slide 2 summary:
+The presentation outlines NVIDIA's focus on emerging opportunities in accelerated computing and AI, highlighting efforts in GPU specialization, data center growth, and AI supercomputers. It mentions expected sequential growth driven by data centers, while acknowledging potential declines in gaming and a target of $1 billion annual revenue from software and services. The slide emphasizes forward-looking statements and non-GAAP financial measures, noting risks and uncertainties that could affect actual outcomes.
+
+Slide 3 summary:
+The slide provides an overview of NVIDIA's Q3 FY24 earnings, including key announcements, financial performance, and a company overview. It also details the reconciliation of non-GAAP to GAAP financial measures. The visual design incorporates NVIDIA's signature green 
+and black color scheme with abstract geometric patterns.
+
+Slide 4 summary:
+The slide presents the Q3 FY24 earnings summary, featuring a visually striking background with green, wave-like patterns. No specific 
+financial data or performance metrics are provided in the image.
+
+Slide 5 summary:
+The slide highlights a record quarter for NVIDIA, driven by a 206% year-over-year increase in total revenue to $18.12 billion, surpassing the expected $16.00 billion. This growth was largely fueled by a 279% increase in Data Center revenue, reaching $14.51 billion, bolstered by the NVIDIA HGX platform, InfiniBand networking, and strong AI demand. Additionally, Gaming revenue rose by 81% to $2.86 billion, reflecting high demand for GeForce RTX 40 series GPUs during the back-to-school and holiday period.
+
+Slide 6 summary:
+The Q3 FY24 financial summary shows a significant revenue increase of 206% year-over-year, reaching $18,120 million, with a non-GAAP gross margin of 75.0%, up 18.9 points year-over-year. Operating income and net income experienced substantial growth, with operating income up 652% and net income up 588%, leading to a diluted EPS of $4.02. The chart illustrates a rising trend in revenue and gross margin over the past five quarters.
+
+Slide 7 summary:
+NVIDIA's data center compute revenue has quadrupled over the past year, with networking revenue nearly tripling, driven by strong demand for accelerated computing for AI applications. The gaming company’s networking business now exceeds $10 billion in annualized revenue, and NVIDIA H100 Tensor Core GPU instances are widely available. The chart shows a significant increase in data center revenue, reaching $14,514 million in Q3 FY24, marking a 279% year-over-year growth.
+
+Slide 8 summary:
+The slide highlights a significant 81% year-over-year and 15% quarter-over-quarter rise in gaming revenue, driven by strong back-to-school demand and an expanding RTX ecosystem with over 475 RTX-enabled games. It also notes the release of TensorRT-LLM for Windows, enhancing on-device LLM inference speed by up to 4 times, and GeForce NOW's expansion to include over 1,700 PC titles.
+
+Slide 9 summary:
+The slide highlights significant growth in professional visualization revenue, reaching $416M in Q3 FY24, marking a 108% year-over-year increase. Key developments include the rise of AI as a demand driver, new NVIDIA RTX Ada Lovelace desktop workstations, and notable 
+collaborations with Mercedes-Benz and Foxconn using Omniverse technology. Additionally, two new Omniverse Cloud services were launched on Microsoft Azure for virtual factory and autonomous vehicle simulation.
+
+Slide 10 summary:
+The slide details NVIDIA's automotive revenue growth, showing an increase from $251M in Q3 FY23 to $261M in Q3 FY24, marking a 4% year-over-year and 3% quarter-over-quarter rise. This growth is attributed to advancements in self-driving platforms powered by NVIDIA DRIVE Orin SoC and AI cockpit solutions, along with an expanded partnership with Foxconn to incorporate the next-generation DRIVE Thor SoC.
+
+Slide 11 summary:
+The slide highlights a significant year-over-year growth of 1,771% and a quarter-over-quarter increase of 16% in cash flow from operations, reaching $7,333 million in Q3 FY24. Key contributors to this growth include higher revenue, with $3.9 billion utilized for shareholder returns and $291 million invested in capital expenditures. The company ended the quarter with $18.3 billion in gross cash, $9.8 billion in debt, and $8.5 billion in net cash.
+
+Slide 12 summary:
+The Q4 FY24 outlook projects revenue of $20.0 billion, with anticipated growth driven by strong demand in the Data Center sector, while gaming is expected to decline. Gross margins are projected at 74.5% GAAP and 75.5% non-GAAP, with operating expenses of approximately $3.17 billion GAAP and $2.20 billion non-GAAP. The tax rate is forecasted at 15.0% for both GAAP and non-GAAP, excluding discrete items.
+
+Slide 13 summary:
+The slide highlights the "Key Announcements This Quarter," set against a sleek, modern background featuring layered green arcs. The design suggests a focus on innovation and growth for the upcoming period.
+
+Slide 14 summary:
+NVIDIA's TensorRT-LLM software enhances inference performance, delivering up to 8x improvement on H100 GPUs over A100 GPUs for GPT-J 6B and 4.6x for Llama2. It achieves a 5.3x reduction in total cost of ownership and 5.6x in energy costs, with availability for data centers and Windows beta for improved local PC performance, visualized in performance bars highlighting significant gains.
+
+Slide 15 summary:
+NVIDIA is partnering with Foxconn to develop "AI factories," advanced data centers leveraging NVIDIA's GH200 and AI Enterprise software. These factories will enhance manufacturing workflows, AI-powered EVs, robotics platforms, and generative AI services. Key initiatives include integrating NVIDIA DRIVE and Isaac platforms for Foxconn's smart EVs, manufacturing systems, and smart city projects, with 
+a visual highlighting the AI factory's role in refining data and AI applications.
+
+Slide 16 summary:
+NVIDIA is partnering with India's Reliance Industries, Tata Group, and Infosys to advance AI technology and infrastructure in the country. With Reliance, NVIDIA will develop a multilingual LLM for generative AI and build supercomputing infrastructure; with Tata, it will establish a state-of-the-art AI supercomputer for infrastructure services. Infosys will integrate NVIDIA's AI ecosystem and establish a Center of Excellence to train 50,000 employees on NVIDIA technology.
+
+Slide 17 summary:
+NVIDIA set new performance records for LLM training, achieving a 2.8x speed increase in a GPT-3 benchmark using their Eos supercomputer with 10,752 H100 GPUs. This significant advancement, due to enhanced software and hardware scaling, also resulted in increased training speeds for recommender models and computer vision models by 1.6x and 1.8x, respectively. Similar efficiency was demonstrated in public cloud deployments on Microsoft Azure.
+
+Slide 18 summary:
+The NVIDIA HGX H200 GPU, the first to feature HBM3e memory, nearly doubles the capacity and offers 2.4 times more bandwidth than its predecessor, enhancing generative AI and scientific computing. It boosts inference speed by up to 2 times when handling large language 
+models compared to H100 GPUs, and will be integrated into Microsoft Azure. Systems powered by the H200 from leading manufacturers are 
+expected to be available by the second quarter of 2024.
+
+Slide 19 summary:
+The Grace Hopper Superchips have gained momentum in the supercomputing industry, with initial shipments to Los Alamos National Lab and the Swiss National Supercomputing Centre. Significant upcoming projects include a U.K. AI supercomputer with 5.5K superchips, and Germany's Jülich will build a system with 24K superchips and 90 exaflops of AI performance. A chart shows the projected growth of cumulative AI performance, exceeding 200 exaflops by next year across various global supercomputers.
+
+Slide 20 summary:
+NVIDIA has introduced a new AI foundry service on Microsoft Azure for developing custom generative AI applications, allowing customers to use their data and NVIDIA's expertise for building enterprise-grade AI models with the DGX Cloud AI factory. The service supports 
+deploying customized models via NVIDIA AI Enterprise, enabling applications like intelligent search and content generation, with early adopters including SAP SE, Amdocs, and Getty Images. The visual outlines the model creation and deployment process, highlighting components like AI Foundations, NeMo, and DGX Cloud.
+
+Slide 21 summary:
+NVIDIA's Spectrum-X Ethernet networking platform, designed for generative AI, promises 1.6x greater performance than traditional Ethernet. Dell, HPE, and Lenovo will be the first to incorporate this technology into their servers, combining it with NVIDIA GPUs and software to enhance enterprise AI capabilities. The platform is set to launch in the first quarter of next year, as depicted by the hardware image on the slide.
+
+Slide 22 summary:
+NVIDIA is partnering with Genentech to enhance drug discovery using generative AI by accelerating Genentech's algorithms with NVIDIA DGX Cloud and integrating NVIDIA BioNeMo to optimize their AI platform. The insights from this collaboration will also contribute to improving NVIDIA's BioNeMo, which is now available as a training service. The slide features an abstract image indicative of molecular structures, suggesting the scientific focus of this collaboration.
+
+Slide 23 summary:
+The slide provides an overview of NVIDIA, featuring a visually striking background with green geometric patterns that convey a modern 
+and technological aesthetic. The text "NVIDIA Overview" suggests an introduction or summary of the company's activities or developments.
+
+Slide 24 summary:
+NVIDIA, headquartered in Santa Clara, CA, has been a leader in accelerated computing for 25 years, addressing challenges beyond the reach of classical computers. Their platform, installed in hundreds of millions of computers and available in all cloud services, powers 76% of the TOP500 supercomputers and supports 4.5 million developers. The accompanying image shows a modern architectural structure, 
+likely part of their headquarters.
+
+Slide 25 summary:
+NVIDIA's Accelerated Computing Platform drives full-stack innovation across silicon, systems, and software, significantly enhancing computing power beyond Moore’s law. The platform includes NVIDIA HPC, AI, and Omniverse, with comprehensive acceleration libraries like 
+cuDNN and TensorRT, supporting various domains from cloud to edge computing. This infrastructure facilitates high-performance computing and AI workloads across data centers, supercomputing centers, and edge systems, utilizing GPUs, CPUs, and DPUs.
+
+Slide 26 summary:
+Accelerated computing involves a comprehensive full-stack approach combining specialized processors, algorithmic acceleration libraries, and expert application refactoring to enhance the speed of compute-intensive tasks. According to Amdahl’s Law, the potential speedup of an application is constrained by the portion of its runtime that can be accelerated, with examples showing significant gains based on different accelerations of runtime percentages. The accompanying diagram illustrates the integration of multiple chips and systems to achieve these performance improvements.
+
+Slide 27 summary:
+Accelerated computing is crucial for addressing modern challenges such as AI and climate simulation, and NVIDIA is leading this effort by developing specialized processors like RT Core. The slide highlights the limitations of Moore's Law, emphasizing the superior performance growth of GPU computing, which achieves performance doubling annually compared to CPUs. The chart illustrates this growth, with GPU performance reaching 1000 times increase over a decade, surpassing the slower pace of single-threaded CPU improvements.
+
+Slide 28 summary:
+The slide discusses the shift from general-purpose to accelerated computing, driven by AI advancements that enable new applications. It notes that the global data center infrastructure will transition to accelerate computing for improved performance and efficiency, with early adoption by cloud service providers and broader enterprise use underway. It highlights future waves such as autonomous vehicles and industrial digitalization, depicted in a graph illustrating adoption stages.
+
+Slide 29 summary:
+The slide highlights NVIDIA's comprehensive platforms for accelerated computing across various sectors, including cloud services, enterprises, autonomous vehicles, and industrial digitalization. Key offerings include NVIDIA HGX and DGX for AI supercomputing, Omniverse for 3D simulation, DRIVE for autonomous vehicles, and AI Enterprise for secure AI deployment. The visual illustrates the progression 
+and application of these technologies across different industries.
+
+Slide 30 summary:
+The NVIDIA accelerated computing platform has grown significantly, with developer numbers rising from 1.8 million in 2020 to 4.5 million in 2023, and CUDA downloads increasing from 20 million to 48 million in the same period. This expansion is supported by a robust ecosystem including 15,000 AI startups, 3,200 GPU-accelerated applications, and numerous resources like 300 libraries and 600 AI models, with 100 updates in the last year.
+
+Slide 31 summary:
+NVIDIA's accelerated computing strategy leverages a vast installed base of GPUs compatible with the CUDA programming model to benefit 
+developers, end users, and cloud providers. This creates a virtuous cycle where NVIDIA's architecture and platforms provide extensive 
+performance and reach, accelerating critical applications across various industries. The flywheel effect, depicted in the diagram, highlights the interdependent growth between the installed base, developers, end-users, and cloud & OEMs, driven by continuous innovation and investment in R&D.
+
+Slide 32 summary:
+AI technology, especially through copilots based on large language models, is significantly enhancing productivity across various industries by automating tasks like document generation and customer service, and boosting content creation efficiency. Specialized AI tools can increase productivity by up to 50% in fields such as software development, legal services, and education. Additionally, sectors like digital advertising, financial services, and agriculture are experiencing transformative improvements in workflow efficiency and ROI due to AI advancements.
+
+Slide 33 summary:
+The slide presents generative AI as a transformative computing platform capable of generating diverse outputs such as text, audio, images, 3D models, video, DNA sequences, proteins, molecules, and animations. It highlights that generative AI learns complex patterns from large datasets, thus enhancing human creativity by generating new data across various applications. Over 1,600 companies are leveraging NVIDIA's platform to harness these capabilities.
+
+Slide 34 summary:
+Large Language Models (LLMs) based on Transformer architecture are pivotal in modern AI, requiring extensive computational resources and infrastructure for development. The chart highlights a significant increase in AI training computational requirements, showing a rapid growth from 8X to 215X every two years since the advent of Transformers. Data centers, equipped with NVIDIA’s advanced computing and networking technologies, play a crucial role in facilitating this large-scale AI workload.
+
+Slide 35 summary:
+The slide highlights the benefits of transitioning from classical computing with 960 CPU-only servers to accelerated computing with 2 
+GPU servers, achieving 25 times lower costs and 84 times better energy efficiency. It emphasizes re-engineering applications for acceleration using technologies like Magnum IO and CUDA-X libraries. Visuals contrast the large CPU server racks against a more compact setup for GPU servers optimized for large-scale model workloads like BERT-Large training and inference.
+
+Slide 36 summary:
+The slide highlights the high return on investment from NVIDIA's compute and networking, where a $1 upfront investment can yield $5 in cloud service provider revenue over four years. It presents a cost breakdown of a $1 billion AI infrastructure over four years, emphasizing a significant rental opportunity of $2.5 billion at $4 per GPU hour. Additionally, performance and utilization improvements can contribute substantial financial gains, with a 25% performance increase worth over $600 million and a 15% utilization increase worth 
+over $350 million.
+
+Slide 37 summary:
+The slide presents a unified architecture approach for training and inference across Cloud, On-Premise, and Edge environments. It highlights NVIDIA's product offerings, including the DGX and HGX H100 for training, and the L40, L4, H100, and Grace Hopper GPUs for data 
+center inference. Edge applications are supported by the functionally-safe AGX system for autonomous vehicles and the industrial-grade IGX system for sectors like healthcare and manufacturing.
+
+Slide 38 summary:
+The slide highlights NVIDIA's AI ecosystem, detailing services like the AI Foundry and DGX Cloud for building enterprise AI applications. It emphasizes the use of Retrieval Augmented Generation (RAG) to enhance AI chatbots with enterprise data through vector databases, minimizing hallucinations. The visual includes connections between NVIDIA AI services, enterprise SaaS platforms, and cloud AI APIs 
+to integrate additional functionalities.
+
+Slide 39 summary:
+NVIDIA's AI Foundry service utilizes its infrastructure and expertise to create custom AI models for enterprises, similar to a semiconductor foundry. Businesses start with pre-trained models from NVIDIA AI Foundations, such as NeMo for language models and Picasso for 
+generative AI, which are fine-tuned on proprietary data with NVIDIA expert assistance. Fine-tuning occurs on NVIDIA DGX Cloud, offering immediate access to AI infrastructure, with revenue generated based on per-node, per-month cloud consumption. The accompanying diagram illustrates the integration of AI Foundations with DGX Cloud and partner platforms like Microsoft Azure and Google Cloud.
+
+Slide 40 summary:
+AI factories are specialized data centers designed to transform large data sets into valuable AI models and tokens, focusing on single AI workloads rather than traditional IT functions. These facilities can be built on-premises, in the cloud, or within SaaS and AI platforms, aiming to allow companies to securely monetize their proprietary data. NVIDIA anticipates recurring revenue from these AI factories through their NVIDIA AI Enterprise system, a key component for running enterprise AI applications.
+
+Slide 41 summary:
+NVIDIA AI Enterprise provides a cloud-native platform for deploying enterprise AI with features like security, API stability, and manageability. It is certified to run on major OEM servers, available across leading cloud marketplaces like Azure and AWS, and supports various AI use cases such as LLM, Speech AI, and cybersecurity. Pricing options include consumption per GPU-hour and subscriptions per 
+GPU per year, integrated with VMware and supported by global system integrators.
+
+Slide 42 summary:
+The slide highlights NVIDIA AI Enterprise's extensive ecosystem involving various partners across multiple sectors to enhance AI application and delivery. It includes collaborations with global system integrators (such as Accenture and Deloitte), AI platform providers (like Databricks and Snowflake), software platforms (including Adobe and ServiceNow), public cloud marketplaces (AWS, Google Cloud), 
+private cloud providers (VMware), and server OEMs (Dell Technologies, Cisco). This comprehensive approach is designed to facilitate AI integration across all enterprise environments.
+
+Slide 43 summary:
+NVIDIA's go-to-market strategy spans cloud and on-premises solutions, focusing on reaching a wide customer base. In the cloud, NVIDIA 
+AI Foundations offers services through partners like Google Cloud, Microsoft Azure, and Oracle, enabling customization and operation of generative AI models. On-premises solutions include NVIDIA's MGX, AGX, IGX, and DGX platforms in collaboration with partners such as Dell Technologies, Hewlett Packard Enterprise, and Lenovo.
+
+Slide 44 summary:
+The slide illustrates a strong and profitable growth trajectory, with revenues increasing from $11,716 million in FY19 to $38,819 million YTD in FY24. Operating income has also risen significantly, reaching $22,385 million YTD in FY24, alongside an operating margin of 58%. The pie charts highlight a shift in revenue distribution, with Data Center and Gaming being dominant contributors in FY24 compared to previous years.
+
+Slide 45 summary:
+The slide highlights NVIDIA's increasing gross profit and gross margins from FY19 to FY24 YTD, reflecting the value of accelerated computing across various technologies. It emphasizes the efficiency and cost-effectiveness of NVIDIA's full-stack solutions, such as two 
+ude a $2.2B charge related to inventory mainly in the Data Center and Gaming sectors.                                         ude a $2
+
+Slide 46 summary:
+The slide highlights strong cash flow generation, showing a growth from $3.1 billion in FY19 to $15.7 billion in YTD FY24. It 
+details capital allocation with $10 billion in share repurchases during FY23 and $398 million in dividends, alongside strategidetails c investments to enhance talent and ecosystem reach. There is $25.2 billion remaining authorization for share repurchase as ofments to the end of Q3.
+
+Slide 47 summary:
+The slide illustrates NVIDIA's market platforms, highlighting revenue distribution and growth. The Data Center segment, comprising 56%sing 56% of FY23 revenue with a 5-year CAGR of 51%, leads with its DGX/HGX/MGX/IGX systems. Gaming follows with 33% revenue shen by Geare driven by GeForce products, Professional Visualization accounts for 6% with NVIDIA RTX GPUs, and Automotive comprises 3% f technolocusing on DRIVE technology.
+
+Slide 48 summary:
+The slide presents NVIDIA's data center as the leading platform in accelerated computing, with a 51% CAGR through FY23 and revenues rising from $2,932M in FY19 to $29,121M in YTD FY24. NVIDIA is a leader in AI training and inference, utilized by all major cloud providers and powering 76% of the TOP500 supercomputers. Key growth drivers include the shift to accelerated computing, emergence of “AI factories,” and rapid product development, supported by DGX Cloud services and AI Enterprise software.   
+
+Slide 49 summary:
+The slide outlines NVIDIA's unified architecture strategy, emphasizing its annual innovations across GPUs, CPUs, DPUs, and networking. Key product advancements from 2023 to 2025 include the H100, B100, and GX200NVL GPUs, GH200 CPU+GPU, BlueField DPUs, 
+and increasing network speeds from 400G to 1,600G, supporting diverse AI training and deployment needs across various infrastructures.
+
+Slide 50 summary:
+The slide highlights GeForce's position as the world's largest gaming platform with over 200 million gamers and a strong market presence, being the top choice for GPUs on Steam. Financially, the platform experienced a 10% compound annual growth rate from FY19 to FY23, with significant revenue increases, peaking at $12,462 million in FY22. Key growth drivers include the adoption of NVIDIA RTX, the expansion of gaming laptops and AI on PCs, and the growth of cloud gaming services like GeForce NOW.    
+
+Slide 51 summary:
+The slide highlights NVIDIA's growth opportunities, emphasizing a significant upgrade potential within the GeForce installed base, with 47% using RTX and 20% on RTX 3060+ performance. GeForce gaming revenue is on a 20% compound annual growth rate (CAGR), with an average selling price (ASP) increase of 10% and units increase of 9% over three years. Additionally, the Ada architecture shows a rapid growth trajectory, ramping up three times faster than Turing at a $699+ price point.
+
+Slide 52 summary:
+Slide 52 summary:
+The slide highlights that the company holds over 95% market share in workstation graphics, serving 45 million designers and creators with a robust ecosystem of RTX-accelerated applications. Key growth drivers include advancements in ray tracing and generative AI, an eith a robust ecosystem of RTX-accelerated applications. Key growth drivers include advancements in ray tracing and generative AI, an expanding designer community, collaborative 3D design, and hybrid work settings. The bar chart shows a revenue growth from $1,130M in FY19 to $2,111M in FY22, with a slight decline through YTD FY24, and an 11% compound annual growth rate through FY23.
+
+Slide 53 summary:
+NVIDIA's automotive segment focuses on autonomous vehicles (AV) and AI cockpits, featuring the NVIDIA DRIVE platform with a comprehensive software stack powered by SoCs. The DRIVE Orin SoC began ramping in FY23, with the next-generation DRIVE Thor set for FY26, supported by a customer base including top EV, truck, and robotaxi makers. A chart shows revenue growing from $641M in FY19 to $903M in FY23, with a 10% CAGR, highlighting growth drivers like centralized computing and partnerships with brands like Mercedes-Benz and Jaguar Land Rover.
+
+Slide 54 summary:
+NVIDIA identifies a $1 trillion long-term market opportunity across various sectors, with significant contributions from Data Center Systems ($300B), Autonomous Machines ($300B), and Omniverse Enterprise ($150B). The visual hierarchy in the slide highlights key areas 
+of growth: cloud services, gaming, AI enterprise solutions, industrial digitalization, and autonomous vehicles and robotics.
+
+Slide 55 summary:
+The slide titled "Financials" features a stylized green and black background with a dynamic, abstract pattern of curved lines. This design likely serves as a thematic introduction to a detailed financial presentation, although specific financial data or charts are not present on this slide.
+
+Slide 56 summary:
+The slide provides an overview of annual cash and cash flow metrics, with charts indicating trends over five fiscal years (FY19-FY23). Operating Income and Operating Cash Flow both peaked in FY22 at $12,690M and $9,108M respectively, before decreasing in FY23. Free Cash Flow mirrored this trend, while Cash Balance saw a peak in FY22 at $21,208M but declined in FY23.
+
+Slide 57 summary:
+The slide highlights NVIDIA's commitment to corporate responsibility, focusing on environmental goals, workplace excellence, and corporate governance. NVIDIA plans to use 100% renewable electricity by FY25 and aims to engage with suppliers on science-based targets to 
+reduce GHG emissions. The company is recognized as a top workplace and for its diversity and inclusivity efforts, with 43% of its board being diverse and 93% of directors being independent.
+
+Slide 58 summary:
+The slide discusses the process of aligning Non-GAAP financial measures with GAAP standards. The image features a modern, green, abstract design, emphasizing a forward-looking or progressive approach to financial reconciliation.
+
+Slide 59 summary:
+The slide presents a reconciliation of non-GAAP to GAAP financial measures for Q3 FY24, highlighting adjustments for acquisition-related costs, stock-based compensation, and IP-related expenses. Key figures show a decrease from non-GAAP to GAAP with gross margin falling from $13,583 million to $13,400 million and net income declining from $10,020 million to $9,243 million, resulting in a diluted EPS drop from $4.02 to $3.71. The chart visually breaks down these adjustments, providing clear insight into the financial impacts of each category.
+
+Slide 60 summary:
+The slide outlines the reconciliation of non-GAAP to GAAP gross margins from Q3 FY 2023 to Q2 FY 2024, showing adjustments for acquisition-related costs, stock-based compensation, and IP-related costs. Over the periods, non-GAAP gross margins increased from 56.1% to 71.2%, with the corresponding GAAP margins rising from 53.6% to 70.1%. Notably, acquisition-related and stock-based compensation costs 
+decrease over time, contributing to the improved GAAP margins.
+
+Slide 61 summary:
+The slide presents a reconciliation of non-GAAP to GAAP gross margins from FY 2019 to YTD Q3 2024, highlighting adjustments for acquisition-related, stock-based compensation, and IP-related costs. GAAP gross margins show a general increase over this period, with the most significant rise in YTD Q3 2024 where non-GAAP margin was $28,000 million at 72.1%, adjusting to $27,510 million at 70.9% GAAP. Key adjustments include amortization of intangible assets and stock-based compensation allocated to cost of goods sold.
+
+Slide 62 summary:
+The slide provides a reconciliation of Non-GAAP to GAAP financial measures, highlighting operating income and margin for fiscal years 
+2019 to YTD Q3 2024. Notably, there is a significant increase in Non-GAAP operating income in YTD Q3 2024 at $22,385 million, with a margin of 57.7%, contrasted by lower GAAP adjustments due to reduced acquisition-related and stock-based compensation costs. Additionally, GAAP income for the same period stands at $19,358 million with a margin of 49.9%, showing a substantial improvement from previous 
+years.
+
+Slide 63 summary:
+The slide presents a reconciliation of non-GAAP to GAAP financial measures, showing free cash flow, purchases, and principal payments 
+related to property and equipment, along with net cash from operating activities from FY 2019 to YTD Q3 2024. Notably, free cash flow 
+dramatically increased to $15,732 million by YTD Q3 2024, coinciding with reduced purchases and payments, resulting in net cash from operating activities reaching $16,591 million.
+
+Slide 64 summary:
+The slide presents a reconciliation of Non-GAAP to GAAP financial measures for Q4 FY24. The Non-GAAP gross margin is 75.5%, which is reduced to 74.5% under GAAP due to stock-based compensation and other costs. Non-GAAP operating expenses are $2,200 million, increasing to $3,165 million in GAAP due to similar adjustments.
+
+Slide 65 summary:
+The slide features an abstract green and black design with the NVIDIA logo prominently displayed. It visually emphasizes the brand's identity, focusing on a sleek and modern aesthetic without any accompanying text.

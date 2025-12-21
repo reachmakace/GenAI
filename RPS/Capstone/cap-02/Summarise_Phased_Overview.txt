@@ -1,0 +1,120 @@
+**Summary: Multi-Modal RAG with Redis & LangChain**
+
+This project aims to build a Retrieval-Augmented Generation (RAG) system that can answer questions about PDF slide decks containing both text and images (charts, tables, graphics). It uses Redis for storage and retrieval, LangChain for orchestration, and a vision-capable LLM (like GPT-4V) for multi-modal understanding. The system ingests slide decks, summarizes slides (text + images), indexes them for retrieval, and uses a semantic cache to speed up repeated queries.
+
+---
+
+## Phased Implementation Plan with Detailed Steps
+
+### **Phase 1 – Text-Only RAG**
+
+**Goal:** Ingest PDF slide decks, extract text, and build a text-only RAG system using Redis and LangChain.
+
+**Steps:**
+1. **PDF Loading & Slide Extraction**
+   - Use LangChain PDF loader to load slide decks.
+   - Split PDFs by page/slide; each slide becomes a separate document.
+   - Extract metadata: { deck_id, slide_number, company, date }
+
+2. **Text Summarization**
+   - For each slide, extract raw text. 
+   - Remove header/footers 
+   - Chunking into overlapping text segments using spaCy sentence segmentation.
+   - Chunk size = 1000 and Overlap = 200
+ 
+3. **Embedding & Indexing**
+   - Use OpenAIEmbeddings (text-embedding-3-large) to embed each slide’s summary_text.
+   - Store slide documents and embeddings in a Redis-backed VectorStore.
+   - Ensure each vector is linked to its slide (slide_id).
+
+4. **Retrieval**
+   - Set up a retriever LangChain’s VectorStoreRetriever to fetch relevant slides for a user query using Cosine similarity.
+
+5. **Answer Generation**
+   - On a user question, retrieve top-k slides and generate grounded answer using OpenAI text LLM (GPT-4o/GPT-4.1).
+
+---
+
+### **Phase 2 – Multi-Modal Slide Summaries**
+
+**Goal:** Enhance slide summaries using GPT-4V to include both text and image content.
+
+**Steps:**
+1. **Slide Image Extraction**
+   - Render each slide as an image (e.g., with pdf2image).
+   - Store images (base64 or URLs) in Redis, linked to slides.
+
+2. **Multi-Modal Summarization**
+   - For each slide, send both the image and extracted text to GPT-4V via a LangChain LLMChain.
+   - Prompt GPT-4V to generate a concise summary that includes insights from both text and visuals.
+
+3. **Update Data Model**
+   - 	
+   - Optionally, store image-only summaries and their embeddings.
+
+4. **Re-Embedding & Re-Indexing**
+   - Embed the new summary_text and update the Redis VectorStore.
+
+---
+
+### **Phase 3 – Vision RAG at Answer Time**
+
+**Goal:** Use both slide text and images at answer time for grounded, multi-modal responses.
+
+**Steps:**
+1. **Query Processing**
+   - Embed the user question.
+
+2. **Slide Retrieval**
+   - Use MultiVectorRetriever to fetch top-k relevant slides based on summary embeddings.
+
+3. **Image Fetching**
+   - For each retrieved slide, fetch associated images from Redis.
+
+4. **Vision LLM Answer Generation**
+   - Send the question, retrieved slide summaries, and images to GPT-4V via a LangChain LLMChain.
+   - Generate a grounded answer referencing both text and visuals.
+
+---
+
+### **Phase 4 – Semantic Cache**
+
+**Goal:** Add a semantic cache to avoid repeated LLM and retrieval calls for similar questions.
+
+**Steps:**
+1. **Cache Data Model**
+   - Store each Q&A pair in Redis with question_text, question_embedding, answer_text, deck_id, slides_used, and timestamp.
+
+2. **Cache Retrieval**
+   - On a new question, embed it and search the cache VectorStore for similar questions.
+   - If a high-similarity match is found, return the cached answer.
+
+3. **Cache Writing**
+   - On cache miss, after generating a new answer, store the Q&A in the cache.
+
+---
+
+### **Phase 5 – Optimization and UX**
+
+**Goal:** Tune system parameters and improve the user interface.
+
+**Steps:**
+1. **Parameter Tuning**
+   - Adjust retrieval thresholds, cache similarity, and recency filters.
+   - Refine prompts for summarization and answer generation.
+
+2. **Frontend Enhancements**
+   - Show referenced slides, slide numbers, and image thumbnails in the UI.
+   - Indicate if the answer was served from cache.
+
+3. **Performance & Monitoring**
+   - Monitor latency, cache hit rates, and retrieval accuracy.
+   - Optimize Redis and LangChain configurations as needed.
+
+---
+
+**Result:**  
+A robust, multi-modal RAG system capable of answering complex questions about slide decks, leveraging both text and images, with efficient retrieval and caching for scalability.
+
+
+2025-12-18 22:47:30 8:M 18 Dec 2025 17:17:30.998 * Background saving terminated with success
